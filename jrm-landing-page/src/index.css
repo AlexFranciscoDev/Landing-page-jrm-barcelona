@@ -49,7 +49,7 @@ input, textarea, select {
 
   --container-width: 1250px;
   --container-padding-tablet: 30px;
-  --container-padding-phone: 20px;
+  --container-padding-phone: 20p /* For top and bottom */
   --radius-sm: 12px;
   --radius-md: 20px;
   --radius-full: 999px;
@@ -57,3 +57,68 @@ input, textarea, select {
 }
 
 /* Global styles */
+/* tablet, mobile responsive max width*/
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+  line-height: 1.625;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: var(--section-padding) 0;
+}
+
+/* Utilities */
+.container {
+  width: min(100% - 48px, var(--container-width));
+  margin: 0 auto;
+}
+
+/* Typographies */
+h1,
+h2,
+h3 {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+
+}
+
+.section-eyebrow {
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem); /* No bajes del min, ni superes el máximo clamp(MIN, IDEAL, MAX) */
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.button--primary:hover {
+  background-color: var(--color-navy-hover);
+}
