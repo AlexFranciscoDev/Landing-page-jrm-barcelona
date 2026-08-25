@@ -1,0 +1,124 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behaviour: smooth;
+}
+
+body,
+h1, h2, h3, h4, p, ul, ol {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input, textarea, select {
+  font: inherit;
+}
+
+/* Variables */
+:root {
+  --color-navy: #1b3a6b;
+  --color-navy-hover: #2e5fa3;
+  --color-navy-light: #ebf0f9;
+  --color-gold: #c9a84c;
+  --color-gold-light: #f5e9c8;
+  --color-cream: #fafaf7;
+  --color-sand: #f0ebe1;
+  --color-ink: #1a1a2e;
+  --color-muted: #4a4a6a;
+  --color-subtle: #8b8baa;
+  --color-white: #ffffff;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-accent: "Cormorant Garamond", Georgia, serif;
+
+  --container-width: 1250px;
+  --container-padding-tablet: 30px;
+  --container-padding-phone: 20p /* For top and bottom */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-full: 999px;
+  --shadow-soft: 0 10px 30px rgba(27, 58, 107, 0.08);
+}
+
+/* Global styles */
+/* tablet, mobile responsive max width*/
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+  line-height: 1.625;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: var(--section-padding) 0;
+}
+
+/* Utilities */
+.container {
+  width: min(100% - 48px, var(--container-width));
+  margin: 0 auto;
+}
+
+/* Typographies */
+h1,
+h2,
+h3 {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+
+}
+
+.section-eyebrow {
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem); /* No bajes del min, ni superes el máximo clamp(MIN, IDEAL, MAX) */
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.button--primary:hover {
+  background-color: var(--color-navy-hover);
+}
