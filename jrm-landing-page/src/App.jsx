@@ -1,5 +1,6 @@
 import './App.css'
-import { Navbar } from './components/Navbar'
+import { Navbar } from './components/Navbar';
+import { Hero } from "./components/Hero";
 
 function App() {
 
@@ -7,9 +8,8 @@ function App() {
     <>
       <Navbar/> {/* Navbar will be here*/}
       <main>
-        <section id="home" className="test-container">
-          this is the home
-        </section>
+        <Hero/>
+        
         <section id="about" className="test-container">
           about us
         </section>
