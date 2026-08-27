@@ -6,15 +6,22 @@
 }
 
 html {
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
 
 body,
-h1, h2, h3, h4, p, ul, ol {
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
@@ -25,12 +32,15 @@ img {
 }
 
 button,
-input, textarea, select {
+input,
+textarea,
+select {
   font: inherit;
 }
 
 /* Variables */
 :root {
+  /* Colors */
   --color-navy: #1b3a6b;
   --color-navy-hover: #2e5fa3;
   --color-navy-light: #ebf0f9;
@@ -42,22 +52,29 @@ input, textarea, select {
   --color-muted: #4a4a6a;
   --color-subtle: #8b8baa;
   --color-white: #ffffff;
-
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-accent: "Cormorant Garamond", Georgia, serif;
-
+  /* Typographies */
+  --font-heading: "Figtree", Arial, sans-serif;
+  --font-body: "Poppins", Arial, sans-serif;
+  /* Layout */
+  --section-padding: 5rem;
   --container-width: 1250px;
-  --container-padding-tablet: 30px;
-  --container-padding-phone: 20p /* For top and bottom */
+  --container-padding: 1.5rem;
+  --header-height: 5rem;
+
+  /* Borders */
   --radius-sm: 12px;
   --radius-md: 20px;
   --radius-full: 999px;
+
+  /* Shadows */
   --shadow-soft: 0 10px 30px rgba(27, 58, 107, 0.08);
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
 }
 
 /* Global styles */
-/* tablet, mobile responsive max width*/
+/* tablet, mobile responsive max width */
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
@@ -76,8 +93,11 @@ section {
 
 /* Utilities */
 .container {
-  width: min(100% - 48px, var(--container-width));
-  margin: 0 auto;
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+  margin-inline: auto;
 }
 
 /* Typographies */
@@ -86,7 +106,6 @@ h2,
 h3 {
   color: var(--color-navy);
   font-family: var(--font-heading);
-
 }
 
 .section-eyebrow {
@@ -98,7 +117,11 @@ h3 {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem); /* No bajes del min, ni superes el máximo clamp(MIN, IDEAL, MAX) */
+  font-size: clamp(
+    2rem,
+    4vw,
+    3rem
+  ); /* No bajes del min, ni superes el máximo clamp(MIN, IDEAL, MAX) */
 }
 
 /* Buttons */
@@ -110,7 +133,10 @@ h3 {
   border-radius: var(--radius-full);
   border: 2px solid transparent;
   font-weight: 500;
-  transition: 0.2s ease;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
   cursor: pointer;
 }
 
@@ -121,4 +147,22 @@ h3 {
 
 .button--primary:hover {
   background-color: var(--color-navy-hover);
+}
+
+.button--secondary {
+  color: var(--color-navy);
+  background-color: transparent;
+  border-color: var(--color-navy);
+}
+
+.button--secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-navy);
+}
+
+.button:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
 }
