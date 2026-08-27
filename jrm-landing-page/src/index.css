@@ -89,6 +89,7 @@ a {
 
 section {
   padding: var(--section-padding) 0;
+  scroll-margin-top: calc(var(--header-height) + 1rem); /* Avoid navbar to hide destiny */
 }
 
 /* Utilities */
@@ -129,7 +130,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 1.75rem;
+  padding: 0.5rem 1.75rem;
   border-radius: var(--radius-full);
   border: 2px solid transparent;
   font-weight: 500;
