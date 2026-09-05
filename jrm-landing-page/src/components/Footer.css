@@ -1,0 +1,61 @@
+.footer-container {
+  padding: 50px 0px 25px;
+  background: var(--color-navy);
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  width: auto;
+  height: 6.5rem;
+}
+
+.footer-content div {
+  max-width: 40%;
+}
+
+.footer-content div > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-gold);
+}
+
+.footer-content div h3 {
+  margin-bottom: 10px;
+}
+
+.footer-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-content ul li {
+  transition: all ease 300ms;
+}
+
+.footer-content ul li:hover {
+  transform: translateX(4px);
+}
+
+.footer-container hr {
+  margin: 50px 0px 20px;
+  height: 0.3px;
+  border: none;
+  background-color: var(--color-white);
+}
+
+.legal-container {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legal-docs {
+    display: flex;
+    gap: 20px;
+}
