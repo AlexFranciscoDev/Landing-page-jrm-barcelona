@@ -1,4 +1,6 @@
 import './Footer.css';
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -46,23 +48,31 @@ export const Footer = () => {
           </div>
           <div className="footer-contact">
             <h3>Contact</h3>
-            <ul>
+            <ul className='footer-contact__links'>
               <li>
-                <a className="footer-link" href="#home">
-                  +34 XXX XXX XXX
+                <a className="footer-link" href="tel:+34696004975">
+                  +34 696 00 49 75
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#about">
+                <a className="footer-link" href="mailto:info@jesusreignsbarcelona.com">
                   info@jesusreignsbarcelona.com
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#events">
-                  Riereta 4 bajos, Raval, Barcelona
+                <a className="footer-link" href="https://maps.app.goo.gl/rJWsMqG4RNkexU1i8" target="_blank">
+                  C/ Riereta 4 bajos, Raval, Barcelona
                 </a>
               </li>
             </ul>
+            <div className='footer-contact__socials'>
+              <a href="https://www.facebook.com/JRMBarcelonaSpain/" target="_blank">
+                <FaFacebook />
+              </a>
+              <a href="https://www.youtube.com/@JRMBarcelona" target="_blank">
+                <FaYoutube />
+              </a>
+            </div>
           </div>
         </div>
 
