@@ -58,7 +58,7 @@ select {
   --font-body: "Poppins", Arial, sans-serif;
   /* Layout */
   --section-padding: 5rem;
-  --container-width: 1250px;
+  --container-width: 1150px;
   --container-padding: 1.5rem;
   --header-height: 5rem;
 
@@ -108,6 +108,11 @@ h2,
 h3 {
   color: var(--color-navy);
   font-family: var(--font-heading);
+}
+
+h2 {
+  font-size: 43px;
+  line-height: 45px;
 }
 
 .section-eyebrow {

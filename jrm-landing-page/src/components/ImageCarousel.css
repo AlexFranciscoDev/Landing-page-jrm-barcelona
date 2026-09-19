@@ -1,0 +1,24 @@
+.carousel {
+  overflow: hidden; /* Hide other images*/
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px 7px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 700ms ease; /* Transition among images*/
+}
+
+.carousel-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+}
