@@ -2,6 +2,7 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import { OurMission } from "./components/OurMission";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero/>
         <About/>
+        <OurMission/>
         <section id="events" className="test-container">
           this is the events
         </section>
