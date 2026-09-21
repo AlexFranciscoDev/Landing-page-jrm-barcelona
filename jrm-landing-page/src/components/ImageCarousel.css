@@ -5,20 +5,27 @@
 }
 
 .carousel-track {
-  display: flex;
+  display: grid;
   transition: transform 700ms ease; /* Transition among images*/
+  /* CAMBIAR TRANSITION A FADE*/
 }
 
 .carousel-track img {
-  flex: 0 0 100%;
+  grid-area: 1 / 1;
   width: 100%;
   min-width: 0;
   height: 500px;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 700ms ease;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .carousel-track {
-    transition: none;
+.carousel-track img[aria-hidden="false"] {
+  opacity: 1;
+}
+
+@media (max-width: 756px) {
+  .carousel-track img {
+    height: 350px;
   }
 }

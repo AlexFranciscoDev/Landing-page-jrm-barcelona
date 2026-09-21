@@ -27,9 +27,6 @@ export const ImageCarousel = () => {
       <div className="carousel">
         <div
           className="carousel-track"
-          style={{
-            transform: `translateX(-${activeIndex * 100}%)`,
-          }}
         >
           {images.map((image, index) => (
             <img

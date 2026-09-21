@@ -74,6 +74,13 @@ select {
   --transition-fast: 200ms ease;
 }
 
+/* Shared section spacing on mobile only */
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 40px;
+  }
+}
+
 /* Global styles */
 /* tablet, mobile responsive max width */
 body {
@@ -90,8 +97,11 @@ a {
 
 section {
   padding: var(--section-padding) 0;
-  scroll-margin-top: calc(var(--header-height) + 1rem); /* Avoid navbar to hide destiny */
+  scroll-margin-top: calc(
+    var(--header-height) + 1rem
+  ); /* Avoid navbar to hide destiny */
 }
+
 
 /* Utilities */
 .container {
@@ -113,6 +123,13 @@ h3 {
 h2 {
   font-size: 43px;
   line-height: 45px;
+}
+
+@media (max-width: 756px) {
+  h2 {
+    font-size: 34px;
+    line-height: 35px;
+  }
 }
 
 .section-eyebrow {
