@@ -51,7 +51,7 @@ export const OurMission = () => {
             </p>
           </div>
         </div>
-        <button className="button button--primary">Grow with us</button>
+        <button className="button button--primary our-mission__btn">Grow with us</button>
       </div>
     </section>
   );

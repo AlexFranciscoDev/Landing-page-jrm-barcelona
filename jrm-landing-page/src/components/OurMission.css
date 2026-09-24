@@ -1,3 +1,57 @@
 #our-mission {
     background-color: var(--color-navy-light);
 }
+
+.our-mission__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.our-mission__grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.our-mission__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 150ms ease-out;
+    border-bottom: 3px solid var(--color-navy);
+}
+
+.our-mission__block:hover {
+    transform: translateY(-4px);
+}
+
+.our-mission__block h3 {
+    font-size: 27px;
+}
+
+.our-mission__icon {
+    background: var(--color-gold);
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.our-mission__icon svg {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.our-mission__btn {
+    display: block;
+    margin: 30px auto 0px;
+}
