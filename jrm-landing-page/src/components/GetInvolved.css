@@ -1,0 +1,38 @@
+#get-involved {
+    text-align: center;
+}
+
+.get-involved__header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.get-involved__subtitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing:2px;
+}
+
+.get-involved-grid {
+    text-align: left;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.get-involved__block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: var(--shadow-soft);
+    border-radius: 20px;
+    min-height: 23.625rem;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.get-involved__block h3 {
+    font-size: 25px;
+}
