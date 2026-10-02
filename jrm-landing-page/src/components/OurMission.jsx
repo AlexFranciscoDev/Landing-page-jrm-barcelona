@@ -1,23 +1,37 @@
-import React from "react";
+import { motion, useReducedMotion } from "motion/react";
 import './OurMission.css';
 import { LuBookOpenText } from "react-icons/lu";
 import { SlPeople } from "react-icons/sl";
 import { PiHandsPraying } from "react-icons/pi";
 
+const MotionDiv = motion.div;
+const MotionButton = motion.button;
+
 export const OurMission = () => {
+  const reduceMotion = useReducedMotion();
+  const entrance = (delay = 0, card = false) => ({
+    initial: reduceMotion ? false : { opacity: 0, y: 24, scale: card ? 0.96 : 1 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    viewport: { once: true, amount: 0.15 },
+    transition: {
+      duration: reduceMotion ? 0 : 0.6,
+      delay: reduceMotion ? 0 : delay,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  });
   return (
     <section id="our-mission">
       <div className="container">
-        <div className="our-mission__header">
+        <MotionDiv className="our-mission__header" {...entrance()}>
           <h2>Grow closer to God</h2>
           <p>
             We want to help you know Jesus personally and follow Him in everyday
             life. Wherever you are in your faith, we invite you to grow through
             His Word, prayer, and community.
           </p>
-        </div>
+        </MotionDiv>
         <div className="our-mission__grid">
-          <div className="our-mission__block">
+          <MotionDiv className="our-mission__block" {...entrance(0, true)}>
             <div className="our-mission__icon">
               <LuBookOpenText />
             </div>
@@ -27,8 +41,8 @@ export const OurMission = () => {
               questions, deepen our understanding, and learn to put His Word
               into practice.
             </p>
-          </div>
-          <div className="our-mission__block">
+          </MotionDiv>
+          <MotionDiv className="our-mission__block" {...entrance(0.1, true)}>
             <div className="our-mission__icon">
               <SlPeople />
             </div>
@@ -38,8 +52,8 @@ export const OurMission = () => {
               with you, encourage you, and help you stay rooted in your
               relationship with God.
             </p>
-          </div>
-          <div className="our-mission__block">
+          </MotionDiv>
+          <MotionDiv className="our-mission__block" {...entrance(0.2, true)}>
             <div className="our-mission__icon">
               <PiHandsPraying />
             </div>
@@ -49,9 +63,9 @@ export const OurMission = () => {
               learn to trust Him. Let’s bring our needs before Him and make time
               for His presence together.
             </p>
-          </div>
+          </MotionDiv>
         </div>
-        <button className="button button--primary our-mission__btn">Grow with us</button>
+        <MotionButton className="button button--primary our-mission__btn" {...entrance()}>Grow with us</MotionButton>
       </div>
     </section>
   );
