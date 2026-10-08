@@ -23,6 +23,8 @@
 }
 
 .get-involved__block {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -31,11 +33,34 @@
     min-height: 23.625rem;
     justify-content: flex-end;
     padding: 30px;
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.031),
-      rgba(0, 0, 0, 0.454));
+}
+
+.get-involved__block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--card-background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transform: scale(1);
+}
+
+.get-involved__block > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (hover: hover) {
+    .get-involved__block::before {
+        transition: transform 250ms ease-out;
+    }
+
+    .get-involved__block:hover::before {
+        transform: scale(1.06);
+    }
 }
 
 .get-involved__block {

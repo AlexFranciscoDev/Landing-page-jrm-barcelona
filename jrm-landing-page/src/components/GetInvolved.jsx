@@ -37,7 +37,7 @@ export const GetInvolved = () => {
             {...entrance(0, true)}
             className="get-involved__block"
             style={{
-              backgroundImage: `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
+              "--card-background": `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
     url('/img/kids.webp')`,
             }}
           >
@@ -52,7 +52,7 @@ export const GetInvolved = () => {
             {...entrance(0.1, true)}
             className="get-involved__block"
             style={{
-              backgroundImage: `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
+              "--card-background": `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
     url('/img/youth.webp')`,
             }}
           >
@@ -67,7 +67,7 @@ export const GetInvolved = () => {
             {...entrance(0, true)}
             className="get-involved__block"
             style={{
-              backgroundImage: `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
+              "--card-background": `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
     url('/img/couples.webp')`,
             }}
           >
@@ -82,7 +82,7 @@ export const GetInvolved = () => {
             {...entrance(0.1, true)}
             className="get-involved__block"
             style={{
-              backgroundImage: `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
+              "--card-background": `linear-gradient(rgb(0 0 0 / 3%), rgb(0 0 0 / 12%)),
     url('/img/worship.webp')`,
             }}
           >
