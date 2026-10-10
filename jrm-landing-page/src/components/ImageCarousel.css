@@ -1,0 +1,31 @@
+.carousel {
+  overflow: hidden; /* Hide other images*/
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px 7px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: grid;
+  transition: transform 700ms ease; /* Transition among images*/
+  /* CAMBIAR TRANSITION A FADE*/
+}
+
+.carousel-track img {
+  grid-area: 1 / 1;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.carousel-track img[aria-hidden="false"] {
+  opacity: 1;
+}
+
+@media (max-width: 756px) {
+  .carousel-track img {
+    height: 350px;
+  }
+}

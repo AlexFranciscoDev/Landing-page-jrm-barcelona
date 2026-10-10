@@ -1,0 +1,79 @@
+#get-involved {
+    text-align: center;
+}
+
+.get-involved__header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.get-involved__subtitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing:2px;
+}
+
+.get-involved-grid {
+    text-align: left;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.get-involved__block {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: var(--shadow-soft);
+    border-radius: 20px;
+    min-height: 23.625rem;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.get-involved__block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--card-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+}
+
+.get-involved__block > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (hover: hover) {
+    .get-involved__block::before {
+        transition: transform 250ms ease-out;
+    }
+
+    .get-involved__block:hover::before {
+        transform: scale(1.06);
+    }
+}
+
+.get-involved__block {
+    color: white;
+}
+
+.get-involved__block h3 {
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .get-involved-grid {
+        grid-template-columns: 1fr;
+    }
+}
