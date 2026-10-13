@@ -59,10 +59,57 @@
     box-shadow: var(--shadow-soft);
 }
 
-.info__paragraph ul {
+ul.info__paragraph {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.metro-stations__intro {
+    margin-bottom: 16px;
+}
+
+.metro-stations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.metro-stations__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgb(29 58 105 / 10%);
+    border-radius: 12px;
+    background-color: rgb(29 58 105 / 4%);
+    font-weight: 500;
+}
+
+.metro-stations__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.metro-stations__badge--l2 {
+    background-color: #923b8b;
+}
+
+.metro-stations__badge--l3 {
+    background-color: #2e9635;
 }
 
 @media (max-width: 768px) {
