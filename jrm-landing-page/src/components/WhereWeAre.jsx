@@ -13,7 +13,7 @@ export const WhereWeAre = () => {
           <div className="where-we-are__info">
             <div className="where-we-are__item">
               <div className="info__container">
-                <h3 className="info__title">Adress</h3>
+                <h3 className="info__title">Address</h3>
                 <p className="info__paragraph">
                   <a
                     href="https://www.bing.com/maps/search?v=2&pc=FACEBK&mid=8100&name=CALLE+RIERETA+NO.+4%2C+BAJOS+ESQUINA+VISTA+ALEGRE%2C+Barcelona%2C+Spain%2C+08001&mkt=es-ES&fbclid=IwY2xjawU6El5leHRuA2FlbQIxMABwZG9mAWJyaWQRMG1EUWNLOUtBbUtocmhKRk1zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeJ097XonPOjghCkxLtrCGSMvcCX9jzfDQBzwtjsd5Q8FCFHJMiBWHo2Tdst8_aem_gF2ITRBYEw-92EHXpzQjXg&FORM=FBKPL1&q=41.37902%2C+2.16717&cp=41.379021%7E2.167170&lvl=11&style=r"

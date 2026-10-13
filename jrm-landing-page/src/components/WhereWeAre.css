@@ -68,10 +68,21 @@
 @media (max-width: 768px) {
     .where-we-are__content {
         flex-direction: column;
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    .where-we-are__content h3 {
+        font-size: 25px;
+    }
+
+    .where-we-are__header {
+        text-align: left;
     }
 
     .where-we-are__map {
         flex: none;
         height: 350px;
     }
+
 }
