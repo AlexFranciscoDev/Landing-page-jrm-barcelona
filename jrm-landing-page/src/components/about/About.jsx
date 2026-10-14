@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
-import { ImageCarousel } from "./ImageCarousel";
+import { ImageCarousel } from "../image-carousel/ImageCarousel";
 import './About.css';
 
 const MotionDiv = motion.div;
