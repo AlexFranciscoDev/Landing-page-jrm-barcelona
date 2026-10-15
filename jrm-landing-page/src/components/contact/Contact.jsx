@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { LuPhone, LuMail } from "react-icons/lu";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Contact.css";
@@ -20,15 +20,10 @@ export const Contact = () => {
 
   // e.target is the field to be edited
   const handleChange = (e) => {
-    const {name, value} = e.target; // Extract the field and value --> email, alex@alex.com
-    setFormData({...formData, [name]: value}); // Update the value
+    const { name, value } = e.target; // Extract the field and value --> email, alex@alex.com
+    setFormData({ ...formData, [name]: value }); // Update the value
     // ...formData gets the current value of form data and updates field [name] and puts the 'value'
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form data submitted: ', formData);
-  }
+  };
 
   return (
     <section id="contact">
@@ -109,14 +104,23 @@ export const Contact = () => {
           </div>
 
           <div className="contact__form">
-            <form onSubmit={handleSubmit}>
+            {/* FormSubmit handles delivery and CAPTCHA without a backend.
+                The recipient must activate the form after the first submission. */}
+            <form
+              action="https://formsubmit.co/alexbcn98@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Nuevo contacto — Jesus Reigns Barcelona" />
+              <input type="hidden" name="_template" value="table" />
               <div>
-                <label htmlFor="full-name">Full name</label>
+                <label htmlFor="fullName">Full name</label>
                 <br />
                 <input
                   type="text"
-                  name="full-name"
-                  id="full-name"
+                  name="fullName"
+                  id="fullName"
+                  autoComplete="name"
+                  value={formData.fullName}
                   required
                   onChange={handleChange}
                 />
@@ -129,6 +133,8 @@ export const Contact = () => {
                   type="tel"
                   name="phone"
                   id="phone"
+                  autoComplete="tel"
+                  value={formData.phone}
                   required
                   onChange={handleChange}
                 />
@@ -141,6 +147,9 @@ export const Contact = () => {
                   type="email"
                   name="email"
                   id="email"
+                  autoComplete="email"
+                  value={formData.email}
+                  required
                   onChange={handleChange}
                 />
               </div>
@@ -151,6 +160,8 @@ export const Contact = () => {
                 <textarea
                   name="message"
                   id="message"
+                  value={formData.message}
+                  required
                   onChange={handleChange}
                 ></textarea>
               </div>
