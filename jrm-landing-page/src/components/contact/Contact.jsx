@@ -10,6 +10,26 @@ const socialLinks = [
 ];
 
 export const Contact = () => {
+  /* Set form state where data will be stored */
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  // e.target is the field to be edited
+  const handleChange = (e) => {
+    const {name, value} = e.target; // Extract the field and value --> email, alex@alex.com
+    setFormData({...formData, [name]: value}); // Update the value
+    // ...formData gets the current value of form data and updates field [name] and puts the 'value'
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form data submitted: ', formData);
+  }
+
   return (
     <section id="contact">
       <div className="container">
@@ -30,7 +50,11 @@ export const Contact = () => {
               </div>
               <div className="info__content">
                 <h3>Phone number</h3>
-                <p><a className="contact__link" href="tel:+34696004975">+34 696 00 49 75</a></p>
+                <p>
+                  <a className="contact__link" href="tel:+34696004975">
+                    +34 696 00 49 75
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -41,7 +65,14 @@ export const Contact = () => {
               </div>
               <div className="info__content">
                 <h3>Email</h3>
-                <p><a className="contact__link" href="mailto:info@jesusreignsbarcelona.com">info@jesusreignsbarcelona.com</a></p>
+                <p>
+                  <a
+                    className="contact__link"
+                    href="mailto:info@jesusreignsbarcelona.com"
+                  >
+                    info@jesusreignsbarcelona.com
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -50,11 +81,23 @@ export const Contact = () => {
               <div className="social-icons">
                 {socialLinks.map(({ name, url, icon: Icon }) =>
                   url ? (
-                    <a key={name} className="info__icon" href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
+                    <a
+                      key={name}
+                      className="info__icon"
+                      href={url}
+                      aria-label={name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Icon aria-hidden="true" />
                     </a>
                   ) : (
-                    <span key={name} className="info__icon" role="img" aria-label={`${name} (enlace pendiente)`}>
+                    <span
+                      key={name}
+                      className="info__icon"
+                      role="img"
+                      aria-label={`${name} (enlace pendiente)`}
+                    >
                       <Icon aria-hidden="true" />
                     </span>
                   ),
@@ -66,28 +109,53 @@ export const Contact = () => {
           </div>
 
           <div className="contact__form">
-            <form action="">
-                <div>
-                    <label htmlFor="full-name">Full name</label><br/>
-                    <input type="text" name="full-name" id="full-name" />
-                </div>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="full-name">Full name</label>
+                <br />
+                <input
+                  type="text"
+                  name="full-name"
+                  id="full-name"
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-                <div>
-                    <label htmlFor="phone">Phone number</label><br/>
-                    <input type="tel" name="phone" id="phone" />
-                </div>
+              <div>
+                <label htmlFor="phone">Phone number</label>
+                <br />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-                <div>
-                    <label htmlFor="email">Email</label><br/>
-                    <input type="email" name="email" id="email" />
-                </div>
+              <div>
+                <label htmlFor="email">Email</label>
+                <br />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  onChange={handleChange}
+                />
+              </div>
 
-                <div>
-                    <label htmlFor="message">Message</label><br/>
-                    <textarea name="message" id="message"></textarea>
-                </div>
+              <div>
+                <label htmlFor="message">Message</label>
+                <br />
+                <textarea
+                  name="message"
+                  id="message"
+                  onChange={handleChange}
+                ></textarea>
+              </div>
 
-                <input type="submit" value="Send" />
+              <input type="submit" value="Send" />
             </form>
           </div>
         </div>
