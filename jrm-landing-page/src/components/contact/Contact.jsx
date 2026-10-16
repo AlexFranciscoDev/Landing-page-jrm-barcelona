@@ -28,16 +28,15 @@ export const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
-        <div className="contact__header">
-          <span className="contact__subtitle">Contact us</span>
+        <div className="contact__content">
+            
+          <div className="contact__info__section">
+            <span className="contact__subtitle">Contact us</span>
           <h2 className="contact__title">Let's talk</h2>
           <p className="contact__paragraph">
             We are here for any questions, prayer, or simply to get to know you
             better.
           </p>
-        </div>
-        <div className="contact__content">
-          <div className="contact__info__section">
             <div className="contact__info">
               {/* icon*/}
               <div className="info__icon">
@@ -100,7 +99,17 @@ export const Contact = () => {
               </div>
             </div>
 
-            <p>verse of the day</p>
+            <p>
+              Have a question or need prayer? Send us a message — we’d love to
+              hear from you.
+            </p>
+            <blockquote className="contact__verse">
+              <p>
+                “Come unto me, all ye that labour and are heavy laden, and I will
+                give you rest.”
+              </p>
+              <cite>Matthew 11:28 · KJV</cite>
+            </blockquote>
           </div>
 
           <div className="contact__form">
@@ -114,12 +123,12 @@ export const Contact = () => {
               <input type="hidden" name="_template" value="table" />
               <div>
                 <label htmlFor="fullName">Full name</label>
-                <br />
                 <input
                   type="text"
                   name="fullName"
                   id="fullName"
                   autoComplete="name"
+                  placeholder="Your full name"
                   value={formData.fullName}
                   required
                   onChange={handleChange}
@@ -128,12 +137,12 @@ export const Contact = () => {
 
               <div>
                 <label htmlFor="phone">Phone number</label>
-                <br />
                 <input
                   type="tel"
                   name="phone"
                   id="phone"
                   autoComplete="tel"
+                  placeholder="+34 600 000 000"
                   value={formData.phone}
                   required
                   onChange={handleChange}
@@ -142,12 +151,12 @@ export const Contact = () => {
 
               <div>
                 <label htmlFor="email">Email</label>
-                <br />
                 <input
                   type="email"
                   name="email"
                   id="email"
                   autoComplete="email"
+                  placeholder="you@example.com"
                   value={formData.email}
                   required
                   onChange={handleChange}
@@ -156,17 +165,18 @@ export const Contact = () => {
 
               <div>
                 <label htmlFor="message">Message</label>
-                <br />
                 <textarea
                   name="message"
                   id="message"
+                  placeholder="How can we help you?"
+                  rows={5}
                   value={formData.message}
                   required
                   onChange={handleChange}
                 ></textarea>
               </div>
 
-              <input type="submit" value="Send" />
+              <button type="submit">Send message</button>
             </form>
           </div>
         </div>

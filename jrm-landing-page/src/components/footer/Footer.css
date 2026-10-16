@@ -57,11 +57,25 @@
 }
 
 .footer-contact__socials a {
-  transition: all ease 300ms;
+  display: inline-flex;
+  transition: transform 200ms ease, color 200ms ease;
 }
 
-.footer-contact__socials a:hover {
-  transform: translateY(-4px);
+.footer-contact__socials a:hover,
+.footer-contact__socials a:focus-visible {
+  transform: translateY(-3px) scale(1.04);
+  color: var(--color-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-contact__socials a {
+    transition: none;
+  }
+
+  .footer-contact__socials a:hover,
+  .footer-contact__socials a:focus-visible {
+    transform: none;
+  }
 }
 
 .legal-container {
