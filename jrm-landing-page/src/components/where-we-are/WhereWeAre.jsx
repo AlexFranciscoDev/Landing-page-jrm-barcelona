@@ -44,7 +44,7 @@ export const WhereWeAre = () => {
               </div>
             </div>
 
-            <div className="where-we-are__info-item">
+            <div id="schedule" className="where-we-are__info-item">
               <div className="info__container">
                 <MotionTitle {...entrance()} className="info__title">Schedule</MotionTitle>
                 <ul className="info__paragraph">

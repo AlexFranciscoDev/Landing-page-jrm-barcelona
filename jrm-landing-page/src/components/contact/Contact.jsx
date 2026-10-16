@@ -194,7 +194,7 @@ export const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit">Send message</button>
+              <button type="submit" className="button button--primary">Send message</button>
             </form>
           </MotionDiv>
         </div>

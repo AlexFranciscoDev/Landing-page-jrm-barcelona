@@ -30,13 +30,18 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#events">
-                  Events
+                <a className="footer-link" href="#our-mission">
+                    Our mission
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#schedule">
-                  Schedule
+                <a className="footer-link" href="#get-involved">
+                  Get involved
+                </a>
+              </li>
+              <li>
+                <a className="footer-link" href="#where-we-are">
+                  Where we are
                 </a>
               </li>
               <li>

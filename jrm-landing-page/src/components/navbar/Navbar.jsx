@@ -43,22 +43,22 @@ export const Navbar = () => {
               </li>
               <li>
                 <a className="navbar__link" href="#about" onClick={closeMenu}>
-                  About us
+                  About
                 </a>
               </li>
               <li>
-                <a className="navbar__link" href="#events" onClick={closeMenu}>
-                  Events
+                <a className="navbar__link" href="#our-mission" onClick={closeMenu}>
+                  Our mission
                 </a>
               </li>
               <li>
-                <a className="navbar__link" href="#schedule" onClick={closeMenu}>
-                  Schedule
+                <a className="navbar__link" href="#get-involved" onClick={closeMenu}>
+                  Get involved
                 </a>
               </li>
               <li>
-                <a className="navbar__link" href="#contact" onClick={closeMenu}>
-                  Contact
+                <a className="navbar__link" href="#where-we-are" onClick={closeMenu}>
+                  Where we are
                 </a>
               </li>
             </ul>
