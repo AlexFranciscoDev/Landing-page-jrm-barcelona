@@ -87,6 +87,23 @@ ul.info__paragraph {
     border-radius: 12px;
     background-color: rgb(29 58 105 / 4%);
     font-weight: 500;
+    transition: translate 200ms ease;
+}
+
+@media (hover: hover) {
+    .metro-stations__item:hover {
+        translate: 0 -3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .metro-stations__item {
+        transition: none;
+    }
+
+    .metro-stations__item:hover {
+        translate: none;
+    }
 }
 
 .metro-stations__badge {
