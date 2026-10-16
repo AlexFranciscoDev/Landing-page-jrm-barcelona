@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { LuPhone, LuMail } from "react-icons/lu";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Contact.css";
+
+const MotionDiv = motion.div;
+const MotionSpan = motion.span;
+const MotionHeading = motion.h2;
+const MotionParagraph = motion.p;
+const MotionQuote = motion.blockquote;
 
 // Añade aquí las URL de los perfiles cuando estén disponibles.
 const socialLinks = [
@@ -10,6 +17,17 @@ const socialLinks = [
 ];
 
 export const Contact = () => {
+  const reduceMotion = useReducedMotion();
+  const entrance = (delay = 0) => ({
+    initial: reduceMotion ? false : { opacity: 0, y: 18 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.15 },
+    transition: {
+      duration: reduceMotion ? 0 : 0.6,
+      delay: reduceMotion ? 0 : delay,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  });
   /* Set form state where data will be stored */
   const [formData, setFormData] = useState({
     fullName: "",
@@ -31,13 +49,13 @@ export const Contact = () => {
         <div className="contact__content">
             
           <div className="contact__info__section">
-            <span className="contact__subtitle">Contact us</span>
-          <h2 className="contact__title">Let's talk</h2>
-          <p className="contact__paragraph">
+            <MotionSpan {...entrance()} className="contact__subtitle">Contact us</MotionSpan>
+          <MotionHeading {...entrance(0.08)} className="contact__title">Let's talk</MotionHeading>
+          <MotionParagraph {...entrance(0.16)} className="contact__paragraph">
             We are here for any questions, prayer, or simply to get to know you
             better.
-          </p>
-            <div className="contact__info">
+          </MotionParagraph>
+            <MotionDiv {...entrance(0.2)} className="contact__info">
               {/* icon*/}
               <div className="info__icon">
                 <LuPhone />
@@ -50,9 +68,9 @@ export const Contact = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </MotionDiv>
 
-            <div className="contact__info">
+            <MotionDiv {...entrance(0.26)} className="contact__info">
               {/* icon*/}
               <div className="info__icon">
                 <LuMail />
@@ -68,9 +86,9 @@ export const Contact = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </MotionDiv>
 
-            <div className="social-media">
+            <MotionDiv {...entrance(0.3)} className="social-media">
               <h3>Follow us</h3>
               <div className="social-icons">
                 {socialLinks.map(({ name, url, icon: Icon }) =>
@@ -97,22 +115,22 @@ export const Contact = () => {
                   ),
                 )}
               </div>
-            </div>
+            </MotionDiv>
 
-            <p>
+            <MotionParagraph {...entrance(0.12)}>
               Have a question or need prayer? Send us a message — we’d love to
               hear from you.
-            </p>
-            <blockquote className="contact__verse">
+            </MotionParagraph>
+            <MotionQuote {...entrance(0.2)} className="contact__verse">
               <p>
                 “Come unto me, all ye that labour and are heavy laden, and I will
                 give you rest.”
               </p>
               <cite>Matthew 11:28 · KJV</cite>
-            </blockquote>
+            </MotionQuote>
           </div>
 
-          <div className="contact__form">
+          <MotionDiv {...entrance(0.16)} className="contact__form">
             {/* FormSubmit handles delivery and CAPTCHA without a backend.
                 The recipient must activate the form after the first submission. */}
             <form
@@ -178,7 +196,7 @@ export const Contact = () => {
 
               <button type="submit">Send message</button>
             </form>
-          </div>
+          </MotionDiv>
         </div>
       </div>
     </section>
