@@ -77,7 +77,7 @@ select {
 /* Shared section spacing on mobile only */
 @media (max-width: 767px) {
   :root {
-    --section-padding: 40px;
+    --section-padding: 50px;
   }
 }
 

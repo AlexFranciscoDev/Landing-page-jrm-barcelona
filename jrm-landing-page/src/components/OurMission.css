@@ -1,0 +1,105 @@
+#our-mission {
+    background-color: var(--color-navy-light);
+}
+
+.our-mission__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.our-mission__grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 20px;
+}
+
+.our-mission__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 150ms ease-out;
+    border-bottom: 3px solid var(--color-navy);
+}
+
+.our-mission__block:hover {
+    transform: translateY(-4px);
+}
+
+@keyframes mission-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mission-glow-in {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@supports (animation-timeline: view()) and (animation-range: entry 0% entry 60%) {
+  @media (prefers-reduced-motion: no-preference) {
+    .our-mission__header,
+    .our-mission__btn {
+      animation: mission-fade-in auto ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+
+    .our-mission__block {
+      animation: mission-glow-in auto ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+
+    .our-mission__block:nth-child(2) {
+      animation-range: entry 10% entry 70%;
+    }
+
+    .our-mission__block:nth-child(3) {
+      animation-range: entry 20% entry 80%;
+    }
+  }
+}
+
+.our-mission__block h3 {
+    font-size: clamp(1.50rem, 1rem + 1vw, 1.6875rem);
+    line-height: 1.25;
+}
+
+.our-mission__icon {
+    background: var(--color-gold);
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.our-mission__icon svg {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.our-mission__btn {
+    display: block;
+    margin: 30px auto 0px;
+}
