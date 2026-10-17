@@ -83,6 +83,7 @@ export const WhereWeAre = () => {
           </div>
           <MotionDiv {...entrance(0.15, true)} className="where-we-are__map">
             <iframe
+              title="Map showing Jesus Reigns Ministries Barcelona at Carrer de la Riereta 4, Barcelona"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.767483474776!2d2.1645295119782766!3d41.37913619638669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a35b76eb3b0d%3A0xe85883c597648005!2sIglesia%20Evang%C3%A9lica%20Jes%C3%BAs%20Reino%20Ministerio!5e0!3m2!1ses!2ses!4v1791834990035!5m2!1ses!2ses"
               style={{ border: 0 }}
               allowFullScreen

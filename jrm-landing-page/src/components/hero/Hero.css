@@ -1,10 +1,10 @@
 #home {
-  height: 100vh;
+  padding: 0;
   position: relative;
-  min-height: 100vh;
-  background-image: url("/img/full-church.webp");
+  min-height: calc(100svh - var(--header-height));
+  background-image: url("/img/full-church-desktop.webp");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -15,7 +15,7 @@
 .hero-images,
 .hero-overlay {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100svh - var(--header-height));
 }
 
 .hero-overlay {
@@ -24,7 +24,7 @@
   align-items: center;
   padding: var(--section-padding) 1.5rem;
 
-  background-color: rgba(0, 0, 0, 0.363);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -46,7 +46,7 @@
 
 .hero-headline {
   font-size: 4.7vw;
-  line-height: 5.4vw;
+  line-height: 1.1;
   color: var(--color-white);
 }
 
@@ -86,8 +86,7 @@
   #home,
   .hero-images,
   .hero-overlay {
-    min-height: 80vh;
-    height: 80vh;
+    min-height: 80svh;
   }
 }
 
@@ -95,13 +94,12 @@
   #home,
   .hero-images,
   .hero-overlay {
-    min-height: 70vh;
-    height: 70vh;
+    min-height: 70svh;
   }
 
   .hero-overlay {
     padding: 2rem 1rem;
-    background-color: rgba(0, 0, 0, 0.18);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .hero-content {
@@ -139,5 +137,11 @@
   .hero-verse {
     font-size: 0.82rem;
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  #home {
+    background-image: url("/img/full-church-mobile.webp");
   }
 }

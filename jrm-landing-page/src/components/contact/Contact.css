@@ -48,7 +48,7 @@
     line-height: 1.4;
 }
 
-.contact__form input:not([type="hidden"]),
+.contact__form input:not([type="hidden"]):not([type="checkbox"]),
 .contact__form textarea {
     box-sizing: border-box;
     width: 100%;
@@ -75,7 +75,7 @@
     color: var(--color-subtle);
 }
 
-.contact__form input:not([type="hidden"]):focus-visible,
+.contact__form input:not([type="hidden"]):not([type="checkbox"]):focus-visible,
 .contact__form textarea:focus-visible {
     border-color: var(--color-navy);
     outline: 2px solid rgb(27 58 107 / 20%);
@@ -213,4 +213,29 @@
 .social-icons a:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 4px;
+}
+
+.contact__privacy {
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+.contact__privacy a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.contact__form .contact__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.contact__consent input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--color-navy);
 }

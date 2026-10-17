@@ -42,6 +42,11 @@ export const Navbar = () => {
                 </a>
               </li>
               <li>
+                <a className="navbar__link" href="#where-we-are" onClick={closeMenu}>
+                  Where we are
+                </a>
+              </li>
+              <li>
                 <a className="navbar__link" href="#about" onClick={closeMenu}>
                   About
                 </a>
@@ -56,14 +61,9 @@ export const Navbar = () => {
                   Get involved
                 </a>
               </li>
-              <li>
-                <a className="navbar__link" href="#where-we-are" onClick={closeMenu}>
-                  Where we are
-                </a>
-              </li>
             </ul>
 
-            <a href="#contact" className="button button--primary navbar__cta" onClick={closeMenu}>
+            <a href="#where-we-are" className="button button--primary navbar__cta" onClick={closeMenu}>
               Visit us
             </a>
           </div>

@@ -27,7 +27,7 @@ export const Hero = () => {
             <MotionHeading {...entrance(0.1)} className="hero-headline">A place where everyone belongs</MotionHeading>
             <MotionParagraph {...entrance(0.2)} className="hero-description">We are a Christian church in the heart of Barcelona, where you can find community, hope, and the presence of God.</MotionParagraph>
             <MotionDiv {...entrance(0.3)} className='hero-buttons'>
-              <a href="#schedule" className='button button--primary'>Schedule</a>
+              <a href="#where-we-are" className='button button--primary'>Plan your visit</a>
               <a href="#contact" className='button button--terciary'>Contact</a>
             </MotionDiv>
             <MotionQuote {...entrance(0.4)} className="hero-verse">

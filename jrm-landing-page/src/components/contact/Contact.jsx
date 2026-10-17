@@ -12,8 +12,8 @@ const MotionQuote = motion.blockquote;
 
 // Añade aquí las URL de los perfiles cuando estén disponibles.
 const socialLinks = [
-  { name: "Facebook", url: "", icon: FaFacebook },
-  { name: "YouTube", url: "", icon: FaYoutube },
+  { name: "Facebook", url: "https://www.facebook.com/JRMBarcelonaSpain/", icon: FaFacebook },
+  { name: "YouTube", url: "https://www.youtube.com/@JRMBarcelona", icon: FaYoutube },
 ];
 
 export const Contact = () => {
@@ -194,6 +194,16 @@ export const Contact = () => {
                 ></textarea>
               </div>
 
+              <p className="contact__privacy">
+                Jesus Reigns Ministries Barcelona uses your details to respond to
+                your request through FormSubmit and Gmail. Read our{' '}
+                <a href="/privacy-policy.html">provisional privacy policy</a> for
+                information about data use and your rights.
+              </p>
+              <label className="contact__consent">
+                <input type="checkbox" name="consent" value="Accepted" required />
+                <span>I have read the privacy policy and consent to the use of my details to respond to my request.</span>
+              </label>
               <button type="submit" className="button button--primary">Send message</button>
             </form>
           </MotionDiv>
