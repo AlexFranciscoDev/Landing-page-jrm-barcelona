@@ -85,7 +85,7 @@ export const Footer = () => {
 
         <div className="legal-container">
             <div>
-                © 2025 Jesus Reigns Ministries Barcelona. Todos los derechos reservados.
+                © {(new Date().getFullYear())} Jesus Reigns Ministries Barcelona. All rights reserved.
             </div>
             <div className='legal-docs'>
                 <span><a href='#'>Privacy policy</a></span>

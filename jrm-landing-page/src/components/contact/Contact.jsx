@@ -123,10 +123,10 @@ export const Contact = () => {
             </MotionParagraph>
             <MotionQuote {...entrance(0.2)} className="contact__verse">
               <p>
-                “Come unto me, all ye that labour and are heavy laden, and I will
-                give you rest.”
+                “Cast thy burden upon the LORD, and he shall sustain thee: he
+                shall never suffer the righteous to be moved.”
               </p>
-              <cite>Matthew 11:28 · KJV</cite>
+              <cite>Psalm 55:22 · KJV</cite>
             </MotionQuote>
           </div>
 
