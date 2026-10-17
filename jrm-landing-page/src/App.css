@@ -125,6 +125,7 @@
 
 .test-container {
   height: 400px;
+  background-color: var(--color-white);
 }
 
 /* Display menu desktop and tablet */

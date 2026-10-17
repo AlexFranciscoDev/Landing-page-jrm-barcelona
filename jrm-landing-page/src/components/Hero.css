@@ -1,0 +1,143 @@
+#home {
+  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../img/full-church.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-images,
+.hero-overlay {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-padding) 1.5rem;
+
+  background-color: rgba(0, 0, 0, 0.363);
+}
+
+.hero-content {
+  position: relative;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  text-align: center;
+}
+
+.hero-tagline {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.hero-headline {
+  font-size: 4.7vw;
+  line-height: 5.4vw;
+  color: var(--color-white);
+}
+
+.hero-description {
+  font-size: 1.7vw;
+  color: var(--color-white);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-verse {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-white);
+}
+
+.hero-verse .verse {
+  color: var(--color-gold);
+}
+
+@media (max-width: 1080px) {
+  .hero-headline {
+    font-size: clamp(3.4rem, 4.5vw, 70px);
+  }
+
+  .hero-description {
+    font-size: 2.2vw;
+  }
+
+  .hero-verse {
+    font-size: 2.1vw;
+  }
+
+  #home,
+  .hero-images,
+  .hero-overlay {
+    min-height: 80vh;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 767px) {
+  #home,
+  .hero-images,
+  .hero-overlay {
+    min-height: 70vh;
+    height: 70vh;
+  }
+
+  .hero-overlay {
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.18);
+  }
+
+  .hero-content {
+    width: min(100%, 560px);
+    gap: 0.9rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 0.95;
+  }
+
+  .hero-description {
+    font-size: clamp(1.05rem, 3.2vw, 1.5rem);
+    line-height: 1.45;
+    max-width: 30rem;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-buttons .button {
+    min-width: 145px;
+    padding: 0.8rem 1.4rem;
+  }
+
+  .hero-verse {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+}
