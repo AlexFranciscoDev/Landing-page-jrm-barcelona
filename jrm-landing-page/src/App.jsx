@@ -1,12 +1,13 @@
 import './App.css'
-import { Navbar } from './components/Navbar';
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { OurMission } from "./components/OurMission";
-import { GetInvolved } from "./components/GetInvolved";
-import { BannerCta } from "./components/BannerCta";
-import { WhereWeAre } from "./components/WhereWeAre";
-import { Footer } from "./components/Footer";
+import { Navbar } from './components/navbar/Navbar';
+import { Hero } from "./components/hero/Hero";
+import { About } from "./components/about/About";
+import { OurMission } from "./components/our-mission/OurMission";
+import { GetInvolved } from "./components/get-involved/GetInvolved";
+import { BannerCta } from "./components/banner-cta/BannerCta";
+import { WhereWeAre } from "./components/where-we-are/WhereWeAre";
+import { Contact } from "./components/contact/Contact";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
 
@@ -20,15 +21,7 @@ function App() {
         <GetInvolved/>
         <BannerCta/>
         <WhereWeAre/>
-        <section id="events" className="test-container">
-          this is the events
-        </section>
-        <section id="schedule" className="test-container">
-          this is the schedule
-        </section>
-        <section id="contact" className="test-container">
-          this is the contact
-        </section>
+        <Contact/>
       </main>
       <Footer/>
     </>

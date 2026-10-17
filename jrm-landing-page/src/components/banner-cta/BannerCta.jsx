@@ -41,7 +41,7 @@ export const BannerCta = () => {
             Barcelona.
           </MotionParagraph>
           <MotionDiv variants={reduceMotion ? undefined : item}>
-            <button className="button button--primary">Join us</button>
+            <a href="#where-we-are" className="button button--primary">Join us</a>
           </MotionDiv>
         </MotionDiv>
       </div>

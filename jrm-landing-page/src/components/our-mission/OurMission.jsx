@@ -5,7 +5,7 @@ import { SlPeople } from "react-icons/sl";
 import { PiHandsPraying } from "react-icons/pi";
 
 const MotionDiv = motion.div;
-const MotionButton = motion.button;
+const MotionLink = motion.a;
 
 export const OurMission = () => {
   const reduceMotion = useReducedMotion();
@@ -65,7 +65,7 @@ export const OurMission = () => {
             </p>
           </MotionDiv>
         </div>
-        <MotionButton className="button button--primary our-mission__btn" {...entrance()}>Grow with us</MotionButton>
+        <MotionLink href="#contact" className="button button--primary our-mission__btn" {...entrance()}>Grow with us</MotionLink>
       </div>
     </section>
   );

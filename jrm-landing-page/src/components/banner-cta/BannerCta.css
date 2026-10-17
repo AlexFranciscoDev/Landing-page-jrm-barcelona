@@ -2,7 +2,7 @@
     background-color: var(--color-navy);
     background-image:
         linear-gradient(to right, rgb(0 0 0 / 75%), rgb(0 0 0 / 20%)),
-        url('/img/banner-cta.webp');
+        url('/img/banner-cta-desktop.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,5 +46,13 @@
     }
     #banner-cta {
         text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #banner-cta {
+        background-image:
+            linear-gradient(to right, rgb(0 0 0 / 75%), rgb(0 0 0 / 40%)),
+            url('/img/banner-cta-mobile.webp');
     }
 }

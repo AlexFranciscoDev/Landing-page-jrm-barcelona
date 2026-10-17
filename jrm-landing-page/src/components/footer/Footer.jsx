@@ -25,18 +25,23 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
+                <a className="footer-link" href="#where-we-are">
+                  Where we are
+                </a>
+              </li>
+              <li>
                 <a className="footer-link" href="#about">
                   About
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#events">
-                  Events
+                <a className="footer-link" href="#our-mission">
+                    Our mission
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#schedule">
-                  Schedule
+                <a className="footer-link" href="#get-involved">
+                  Get involved
                 </a>
               </li>
               <li>
@@ -66,10 +71,10 @@ export const Footer = () => {
               </li>
             </ul>
             <div className='footer-contact__socials'>
-              <a href="https://www.facebook.com/JRMBarcelonaSpain/" target="_blank">
+              <a href="https://www.facebook.com/JRMBarcelonaSpain/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)">
                 <FaFacebook />
               </a>
-              <a href="https://www.youtube.com/@JRMBarcelona" target="_blank">
+              <a href="https://www.youtube.com/@JRMBarcelona" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in a new tab)">
                 <FaYoutube />
               </a>
             </div>
@@ -80,11 +85,11 @@ export const Footer = () => {
 
         <div className="legal-container">
             <div>
-                © 2025 Jesus Reigns Ministries Barcelona. Todos los derechos reservados.
+                © {(new Date().getFullYear())} Jesus Reigns Ministries Barcelona. All rights reserved.
             </div>
             <div className='legal-docs'>
-                <span><a href='#'>Privacy policy</a></span>
-                <span><a href='#'>Legal notice</a></span>
+                <span><a href="/privacy-policy.html">Privacy policy</a></span>
+                <span><a href="/legal-notice.html">Legal notice</a></span>
             </div>
         </div>
       </div>
