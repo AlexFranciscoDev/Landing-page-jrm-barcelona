@@ -42,11 +42,6 @@ export const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a className="navbar__link" href="#where-we-are" onClick={closeMenu}>
-                  Where we are
-                </a>
-              </li>
-              <li>
                 <a className="navbar__link" href="#about" onClick={closeMenu}>
                   About
                 </a>
@@ -59,6 +54,11 @@ export const Navbar = () => {
               <li>
                 <a className="navbar__link" href="#get-involved" onClick={closeMenu}>
                   Get involved
+                </a>
+              </li>
+              <li>
+                <a className="navbar__link" href="#where-we-are" onClick={closeMenu}>
+                  Where we are
                 </a>
               </li>
             </ul>
