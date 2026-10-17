@@ -2,7 +2,7 @@
   height: 100vh;
   position: relative;
   min-height: 100vh;
-  background-image: url("../img/full-church.webp");
+  background-image: url("/img/full-church.webp");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

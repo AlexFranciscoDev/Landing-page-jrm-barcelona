@@ -1,6 +1,8 @@
 import './App.css'
 import { Navbar } from './components/Navbar';
 import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Footer } from "./components/Footer";
 
 function App() {
 
@@ -9,10 +11,7 @@ function App() {
       <Navbar/> {/* Navbar will be here*/}
       <main>
         <Hero/>
-        
-        <section id="about" className="test-container">
-          about us
-        </section>
+        <About/>
         <section id="events" className="test-container">
           this is the events
         </section>
@@ -23,6 +22,7 @@ function App() {
           this is the contact
         </section>
       </main>
+      <Footer/>
     </>
   )
 }

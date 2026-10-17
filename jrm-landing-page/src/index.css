@@ -58,7 +58,7 @@ select {
   --font-body: "Poppins", Arial, sans-serif;
   /* Layout */
   --section-padding: 5rem;
-  --container-width: 1250px;
+  --container-width: 1150px;
   --container-padding: 1.5rem;
   --header-height: 5rem;
 
@@ -72,6 +72,13 @@ select {
 
   /* Transitions */
   --transition-fast: 200ms ease;
+}
+
+/* Shared section spacing on mobile only */
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 40px;
+  }
 }
 
 /* Global styles */
@@ -90,8 +97,11 @@ a {
 
 section {
   padding: var(--section-padding) 0;
-  scroll-margin-top: calc(var(--header-height) + 1rem); /* Avoid navbar to hide destiny */
+  scroll-margin-top: calc(
+    var(--header-height) + 1rem
+  ); /* Avoid navbar to hide destiny */
 }
+
 
 /* Utilities */
 .container {
@@ -108,6 +118,18 @@ h2,
 h3 {
   color: var(--color-navy);
   font-family: var(--font-heading);
+}
+
+h2 {
+  font-size: 43px;
+  line-height: 45px;
+}
+
+@media (max-width: 756px) {
+  h2 {
+    font-size: 34px;
+    line-height: 35px;
+  }
 }
 
 .section-eyebrow {
