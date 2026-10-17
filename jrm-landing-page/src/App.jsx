@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { OurMission } from "./components/OurMission";
 import { GetInvolved } from "./components/GetInvolved";
+import { BannerCta } from "./components/BannerCta";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <About/>
         <OurMission/>
         <GetInvolved/>
+        <BannerCta/>
         <section id="events" className="test-container">
           this is the events
         </section>
