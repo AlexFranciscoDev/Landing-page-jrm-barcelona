@@ -125,6 +125,10 @@ h2 {
   line-height: 45px;
 }
 
+h3 {
+  font-size: 33px;
+}
+
 @media (max-width: 756px) {
   h2 {
     font-size: 34px;
